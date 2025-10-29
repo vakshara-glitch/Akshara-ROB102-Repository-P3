@@ -9,6 +9,7 @@
 #include "planning.h"
 
 
+
 void printPath(std::vector<int>& path, Graph& g) {
 
     if (path.size() < 1)
@@ -58,14 +59,11 @@ std::vector<float> getEdgeCosts(int n, Graph& g)
     return {0,0,0,0};
 }
 
-// *** Task: Implement this function *** //
 int getParent(int n, Graph& g)
 {
-    // BEGIN STUDENT CODE
-    // END STUDENT CODE
-
-    //replace this with your code
-    return -1;
+    int idx = g.nodes[n].parent_idx      
+    
+    return idx;
 }
 
 void initGraph(Graph& g)
@@ -80,6 +78,15 @@ void initGraph(Graph& g)
 }
 
 // *** Task: Implement this function *** //
+
+/**
+ * Searches for a path from a starting node to a goal node on a graph using breadth first search.
+ * @param  start The index of the starting node.
+ * @param  goal The index of the goal node.
+ * @param  g The associated graph.
+ * @return  A list of indicies of nodes that form a path from the starting node to the goal node.
+ */
+
 std::vector<int> bfs(int start, int goal, Graph& g)
 {
     initGraph(g);
@@ -87,8 +94,16 @@ std::vector<int> bfs(int start, int goal, Graph& g)
 
     std::queue<int> visit_queue;
 
-    // BEGIN STUDENT CODE
-    // END STUDENT CODE
+    visit_queue.push(start)
+
+    while (visit_queue.size() > 0 && visit_queue.back() != goal ){
+        //find the neighbors
+        //push the neighbors into visit queue
+        //If distance neighbor> distance to current node + cost
+            // then update path
+
+    }
+
     return path;
 }
 

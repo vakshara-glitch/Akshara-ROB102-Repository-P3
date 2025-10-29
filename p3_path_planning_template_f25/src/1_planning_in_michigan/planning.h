@@ -16,11 +16,10 @@
  */
 struct Node
 {
-
     std::string city;
-    // *** Task: Add variables necessary for running your search algorithms *** //
-    // BEGIN STUDENT CODE
-    //END STUDENT CODE
+    int parent_idx;
+    int dist_to_parent;
+    bool visited;
 };
 
 /**
