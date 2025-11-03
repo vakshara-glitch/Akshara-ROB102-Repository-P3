@@ -93,10 +93,32 @@ std::vector<int> bfs(int start, int goal, Graph& g)
     std::vector<int> path;
 
     std::queue<int> visit_queue;
+    for (int i == 0; i<visit_queue.size(); ++i) {
+        g.nodes[i].dist_to_parent = 10e6;
+    }
+    Node current;
+    visit_queue.push(g.nodes[start]);
+    g.nodes[start].dist_to_parent = 0;
 
-    visit_queue.push(start)
-
-    while (visit_queue.size() > 0 && visit_queue.back() != goal ){
+    std::vector<std::vector<int>> neighbors;
+    std::vector<std::vector<int>> costs;
+    while (visit_queue.size() > 0 && visit_queue.back() != goal){
+        current.push(visit_queue.front());
+        visit_queue.pop();
+        current.visited = true;
+        if (current == goal) { // how to make current an int
+            tracePath(current, g);
+            break;
+        }
+        neighbors = getNeighbors(current, g);
+        costs = getEdgeCosts(current, g);
+        for (int i==0; i<neighbors.size(); ++i) {
+            if (neighbors[i].visited == false) { // neighbors is an int vector??
+                visit_queue.push_back(neighbors[i]);
+            }
+            if (neighbors[i].distance > current.dist_to_parent + )
+        }
+        
         //find the neighbors
         //push the neighbors into visit queue
         //If distance neighbor> distance to current node + cost
