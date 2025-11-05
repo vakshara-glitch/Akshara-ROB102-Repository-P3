@@ -42,28 +42,27 @@ std::vector<int> tracePath(int n, Graph& g) {
 // *** Task: Implement this function *** //
 std::vector<int> getNeighbors(int n, Graph& g)
 {
-    // BEGIN STUDENT CODE
-    // END STUDENT CODE
-
     //replace this with your code
-    return {0,0,0};
+    return g.edges[n];
 }
 
 // *** Task: Implement this function *** //
 std::vector<float> getEdgeCosts(int n, Graph& g)
 {
-    // BEGIN STUDENT CODE
-    // END STUDENT CODE
+    std::vector<float> costs = g.edge_costs[n];
 
     //replace this with your code
-    return {0,0,0,0};
+    return costs;
 }
 
 int getParent(int n, Graph& g)
 {
-    int idx = g.nodes[n].parent_idx      
-    
-    return idx;
+    if (g.nodes[n].parent_idx) {
+        return g.nodes[n].parent_idx;
+    }
+    else {
+        return -1;
+    }
 }
 
 void initGraph(Graph& g)
@@ -92,38 +91,43 @@ std::vector<int> bfs(int start, int goal, Graph& g)
     initGraph(g);
     std::vector<int> path;
 
-    std::queue<int> visit_queue;
-    for (int i == 0; i<visit_queue.size(); ++i) {
-        g.nodes[i].dist_to_parent = 10e6;
-    }
-    Node current;
-    visit_queue.push(g.nodes[start]);
-    g.nodes[start].dist_to_parent = 0;
+    std::queue<int> visit_queue; //Done
+    std::vector<int> neighbors; //Done 
+    std::vector<float> costs;// Done
 
-    std::vector<std::vector<int>> neighbors;
-    std::vector<std::vector<int>> costs;
-    while (visit_queue.size() > 0 && visit_queue.back() != goal){
-        current.push(visit_queue.front());
-        visit_queue.pop();
-        current.visited = true;
-        if (current == goal) { // how to make current an int
+    for (int i = 0; i < visit_queue.size(); ++i) {
+        g.nodes[i].dist_to_parent = 10e6;
+    } // Done 
+
+    int current; // Done 
+
+    visit_queue.push(start);
+    g.nodes[start].dist_to_parent = 0;
+   
+    while (visit_queue.size() > 0) {
+        
+        current = visit_queue.front();
+        visit_queue.pop();//Done
+        g.nodes[current].visited = true; // Done 
+
+        if (current == goal) { 
             tracePath(current, g);
             break;
         }
+
         neighbors = getNeighbors(current, g);
         costs = getEdgeCosts(current, g);
-        for (int i==0; i<neighbors.size(); ++i) {
-            if (neighbors[i].visited == false) { // neighbors is an int vector??
-                visit_queue.push_back(neighbors[i]);
-            }
-            if (neighbors[i].distance > current.dist_to_parent + )
-        }
-        
-        //find the neighbors
-        //push the neighbors into visit queue
-        //If distance neighbor> distance to current node + cost
-            // then update path
 
+        for (int i = 0; i<neighbors.size(); ++i) {
+            if (g.nodes[neighbors[i]].visited == false) { // neighbors is an int vector??
+                visit_queue.push(neighbors[i]);
+            }
+            if (g.nodes[neighbors[i]].dist_to_parent > g.nodes[current].dist_to_parent + costs[i]) {
+                int parent_idx = getParent(neighbors[i],g);
+                current = parent_idx;
+                g.nodes[current].dist_to_parent = g.nodes[neighbors[i]].dist_to_parent + costs[i];
+            }
+        }
     }
 
     return path;
