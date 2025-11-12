@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt" AND EXISTS "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt" AND
-  "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt")
+if(EXISTS "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt" AND EXISTS "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt" AND
+  "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt'"
+    "'/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -35,9 +35,9 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/usr/local/bin/git"
+    COMMAND "/opt/homebrew/bin/git"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/google/googletest.git" "gtest-src"
-    WORKING_DIRECTORY "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps"
+    WORKING_DIRECTORY "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -51,9 +51,9 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "/usr/local/bin/git"
+  COMMAND "/opt/homebrew/bin/git"
           checkout "v1.13.0" --
-  WORKING_DIRECTORY "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
+  WORKING_DIRECTORY "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -64,24 +64,24 @@ endif()
 set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
-    COMMAND "/usr/local/bin/git" 
+    COMMAND "/opt/homebrew/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
+    WORKING_DIRECTORY "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt" "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitinfo.txt" "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-gitclone-lastrun.txt'")
 endif()

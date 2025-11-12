@@ -4,7 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googlemock/include -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googlemock -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/include -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/include -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest
+CXX_INCLUDES = -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googlemock/include -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googlemock -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/include -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/include -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest
 
-CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG -std=c++14  -DGTEST_HAS_PTHREAD=1  
+CXX_FLAGSarm64 =  -std=c++14 -O2 -g -DNDEBUG -arch arm64  -DGTEST_HAS_PTHREAD=1  
+
+CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG -arch arm64  -DGTEST_HAS_PTHREAD=1  
 

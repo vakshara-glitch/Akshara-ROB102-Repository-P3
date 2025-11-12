@@ -4,7 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/include -I/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/src/1_planning_in_michigan -I/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/test -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/include -isystem /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest
+CXX_INCLUDES = -I/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/include -I/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/src/1_planning_in_michigan -I/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/test -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/include -isystem /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest
 
-CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG -std=gnu++14
+CXX_FLAGSarm64 =  -std=c++14 -O2 -g -DNDEBUG -arch arm64
+
+CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG -arch arm64
 

@@ -17,9 +17,9 @@
 struct Node
 {
     std::string city;
-    int parent_idx;
-    int dist_to_parent;
-    bool visited;
+    int parent_idx=-1; //note: added
+    float dist_to_parent;
+    bool visited=false;
 };
 
 /**

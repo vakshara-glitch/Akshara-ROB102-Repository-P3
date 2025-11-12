@@ -29,6 +29,7 @@ void printPath(std::vector<int>& path, Graph& g) {
 std::vector<int> tracePath(int n, Graph& g) {
     std::vector<int> path;
     int curr = n;
+    //std::cout << g.nodes[neighbors[i]].city << " ";
     do {
         path.push_back(curr);
         curr = getParent(curr, g);
@@ -57,12 +58,12 @@ std::vector<float> getEdgeCosts(int n, Graph& g)
 
 int getParent(int n, Graph& g)
 {
-    if (g.nodes[n].parent_idx) {
-        return g.nodes[n].parent_idx;
-    }
-    else {
-        return -1;
-    }
+    // if (g.nodes[n].parent_idx) {
+    return g.nodes[n].parent_idx;
+    // }
+    // else {
+    //     return -1;
+    // }
 }
 
 void initGraph(Graph& g)
@@ -88,48 +89,46 @@ void initGraph(Graph& g)
 
 std::vector<int> bfs(int start, int goal, Graph& g)
 {
+    //print parents, current, costs and debug
     initGraph(g);
     std::vector<int> path;
 
-    std::queue<int> visit_queue; //Done
-    std::vector<int> neighbors; //Done 
-    std::vector<float> costs;// Done
+    std::queue<int> visit_queue;
+    std::vector<int> neighbors;  
+    std::vector<float> costs;
 
-    for (int i = 0; i < visit_queue.size(); ++i) {
+    for (int i = 0; i < g.nodes.size(); ++i) {
         g.nodes[i].dist_to_parent = 10e6;
-    } // Done 
+    }
 
-    int current; // Done 
+    int current; 
 
     visit_queue.push(start);
+
     g.nodes[start].dist_to_parent = 0;
-   
-    while (visit_queue.size() > 0) {
-        
+
+    while (visit_queue.size() > 0) { 
         current = visit_queue.front();
-        visit_queue.pop();//Done
-        g.nodes[current].visited = true; // Done 
+        visit_queue.pop();
+        g.nodes[current].visited = true;  
 
         if (current == goal) { 
-            tracePath(current, g);
+            path = tracePath(current, g);
             break;
         }
-
         neighbors = getNeighbors(current, g);
         costs = getEdgeCosts(current, g);
 
-        for (int i = 0; i<neighbors.size(); ++i) {
-            if (g.nodes[neighbors[i]].visited == false) { // neighbors is an int vector??
+        for (int i = 0; i < neighbors.size(); ++i) {
+            if (g.nodes[neighbors[i]].visited == false) { 
                 visit_queue.push(neighbors[i]);
-            }
+            }   
             if (g.nodes[neighbors[i]].dist_to_parent > g.nodes[current].dist_to_parent + costs[i]) {
-                int parent_idx = getParent(neighbors[i],g);
-                current = parent_idx;
-                g.nodes[current].dist_to_parent = g.nodes[neighbors[i]].dist_to_parent + costs[i];
-            }
+                g.nodes[neighbors[i]].parent_idx = current;
+                g.nodes[neighbors[i]].dist_to_parent = g.nodes[current].dist_to_parent + costs[i];
+            } 
         }
     }
-
     return path;
 }
 

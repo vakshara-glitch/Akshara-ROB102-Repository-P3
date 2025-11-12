@@ -4,7 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/include
+CXX_INCLUDES = -I/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/include
 
-CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG
+CXX_FLAGSarm64 =  -std=c++14 -O2 -g -DNDEBUG -arch arm64
+
+CXX_FLAGS =  -std=c++14 -O2 -g -DNDEBUG -arch arm64
 

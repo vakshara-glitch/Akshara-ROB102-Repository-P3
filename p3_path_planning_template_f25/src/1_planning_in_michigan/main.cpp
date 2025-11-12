@@ -11,7 +11,7 @@ int main() {
     // Graph g = createGraph("data/planning_in_michigan/bereaf23_graph.txt");
 
     int start = nameToIdx("ann_arbor", g.data);
-    int goal = nameToIdx("flint", g.data);
+    int goal = nameToIdx("marquette", g.data);
     // int start = nameToIdx("roseville", g.data);
     // int goal = nameToIdx("saipan", g.data);
     std::vector<int> path;

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src
+# Install script for directory: /Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-build/googlemock/cmake_install.cmake")
+  include("/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-build/googlemock/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/aksharasaivuppala/Desktop/ROB_102/p3_path_planning_template_f25/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-build/install_local_manifest.txt"
+  file(WRITE "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
