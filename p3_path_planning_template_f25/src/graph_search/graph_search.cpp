@@ -56,8 +56,50 @@ std::vector<Cell> breadthFirstSearch(GridGraph &graph, const Cell &start, const 
 
     /* BEGIN STUDENT CODE. */
     /* END STUDENT CODE. */
+// pasted from prev code
+    //print parents, current, costs and debug
+    // initGraph(g);
+    // std::vector<int> path;
+    /*
+    std::queue<int> visit_queue;
+    std::vector<int> neighbors;  
+    std::vector<float> costs;
+    
+    for (int i = 0; i < g.nodes.size(); ++i) {
+        g.nodes[i].dist_to_parent = 10e6;
+    }
 
+    int current; 
+
+    visit_queue.push(start);
+
+    g.nodes[start].dist_to_parent = 0;
+
+    while (visit_queue.size() > 0) { 
+        current = visit_queue.front();
+        visit_queue.pop();
+        g.nodes[current].visited = true;  
+
+        if (current == goal) { 
+            path = tracePath(current, g);
+            break;
+        }
+        neighbors = getNeighbors(current, g);
+        costs = getEdgeCosts(current, g);
+
+        for (int i = 0; i < neighbors.size(); ++i) {
+            if (g.nodes[neighbors[i]].visited == false) { 
+                visit_queue.push(neighbors[i]);
+            }   
+            if (g.nodes[neighbors[i]].dist_to_parent > g.nodes[current].dist_to_parent + costs[i]) {
+                g.nodes[neighbors[i]].parent_idx = current;
+                g.nodes[neighbors[i]].dist_to_parent = g.nodes[current].dist_to_parent + costs[i];
+            } 
+        }
+    }
     return path;
+    */
+    // return path;
 }
 
 // *** Task: Implement this function if completing the advanced extensions *** //

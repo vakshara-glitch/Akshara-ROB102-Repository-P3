@@ -1,5 +1,5 @@
-if(EXISTS "/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public[1]_tests.cmake")
-  include("/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public[1]_tests.cmake")
+if(EXISTS "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public[1]_tests.cmake")
+  include("/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public[1]_tests.cmake")
 else()
   add_test(test_public_NOT_BUILT test_public_NOT_BUILT)
 endif()

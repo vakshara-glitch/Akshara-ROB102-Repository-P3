@@ -3,13 +3,13 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/opt/homebrew/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/tmp/gtest-populate-gitclone.cmake
-source_dir=/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src
-work_dir=/Users/nithyarajan/Documents/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps
+command=/usr/bin/cmake;-P;/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-subbuild/gtest-populate-prefix/tmp/gtest-populate-gitclone.cmake
+source_dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src
+work_dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps
 repository=https://github.com/google/googletest.git
 remote=origin
 init_submodules=TRUE
 recurse_submodules=--recursive
 submodules=
 CMP0097=NEW
-      
+

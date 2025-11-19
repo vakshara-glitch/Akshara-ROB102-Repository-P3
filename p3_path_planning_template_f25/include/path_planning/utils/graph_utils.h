@@ -23,6 +23,12 @@ struct CellNode
 {
     // *** Task: Add variables necessary for running your search algorithms *** //
     // *** BEGIN STUDENT CODE *** //
+    int i;
+    int j;
+    int parent_idx = -1;
+    int dist_to_parent;
+    bool visited =false;
+
     // *** END STUDENT CODE *** //
 };
 
@@ -38,7 +44,7 @@ struct GridGraph
         origin_y(0),
         meters_per_cell(0),
         collision_radius(0.15),
-        threshold(-100)  // TODO: Adjust threshold.
+        threshold(0)  // TODO: Adjust threshold.
     {
     };
 
@@ -47,14 +53,14 @@ struct GridGraph
     float meters_per_cell;                  // Width of a cell in meters.
     float collision_radius;                 // The radius to use to check collisions.
     int8_t threshold;                       // Threshold to check if a cell is occupied or not.
-
     std::vector<int8_t> cell_odds;          // The odds that a cell is occupied.
     std::vector<float> obstacle_distances;  // The distance from each cell to the nearest obstacle.
-
     std::vector<Cell> visited_cells;        // A list of visited cells. Used for visualization.
-    
+    std::vector<CellNode> cell_nodes;       // a vector of cell nodes - added by us 
+   
     /** Add anything here needed to represent individual nodes  */
     // BEGIN STUDENT CODE
+    
     // END STUDENT CODE
 };
 
