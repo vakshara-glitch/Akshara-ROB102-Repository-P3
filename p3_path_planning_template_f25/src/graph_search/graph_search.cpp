@@ -49,15 +49,53 @@ std::vector<Cell> depthFirstSearch(GridGraph &graph, const Cell &start, const Ce
 std::vector<Cell> breadthFirstSearch(GridGraph &graph, const Cell &start, const Cell &goal)
 {
     std::vector<Cell> path; // The final path should be placed here.
-
+    std::queue<int> visit_queue;
+    std::vector<int> neighbors;  
+    
     initGraph(graph); // Make sure all the node values are reset.
 
+    for (int i = 0; i < graph.cell_nodes.size(); ++i) {
+        graph.cell_nodes[i].dist_to_parent = 10e6;
+    }
+    
     int start_idx = cellToIdx(start.i, start.j, graph);
+    int goal_idx = cellToIdx(goal.i, goal.j, graph);
+    int current_idx;
 
-    /* BEGIN STUDENT CODE. */
-    /* END STUDENT CODE. */
-// pasted from prev code
-    //print parents, current, costs and debug
+    visit_queue.push(start_idx);
+
+    graph.cell_nodes[start_idx].dist_to_parent = 0;
+    
+    while(visit_queue.size() > 0) {
+        current_idx = visit_queue.front();
+        visit_queue.pop();
+        graph.cell_nodes[current_idx].visited = true; 
+        
+        if (current_idx == goal_idx) { 
+            path = tracePath(goal_idx, graph);
+            break;
+        }
+        neighbors = findNeighbors(current_idx, graph);
+      
+        // costs = getEdgeCosts(current, g); // manually calculate
+        //int costs = std::sqrt(std::pow((graph.cell_nodes[neighbors[i]].i - graph.cell_nodes[current_idx].i),2) + std::pow((graph.cell_nodes[neighbors[i]].j - graph.cell_nodes[current_idx].j),2));
+       
+       
+        for (int i = 0; i < neighbors.size(); ++i) {
+            if (graph.cell_nodes[neighbors[i]].visited == false) { 
+                visit_queue.push(neighbors[i]);
+            }   
+            if (graph.cell_nodes[neighbors[i]].dist_to_parent > graph.cell_nodes[current_idx].dist_to_parent + std::sqrt(std::pow((graph.cell_nodes[neighbors[i]].i - graph.cell_nodes[current_idx].i),2) + std::pow((graph.cell_nodes[neighbors[i]].j - graph.cell_nodes[current_idx].j),2))) {
+                graph.cell_nodes[neighbors[i]].parent_idx = current_idx;
+                graph.cell_nodes[neighbors[i]].dist_to_parent = graph.cell_nodes[current_idx].dist_to_parent + std::sqrt(std::pow((graph.cell_nodes[neighbors[i]].i - graph.cell_nodes[current_idx].i),2) + std::pow((graph.cell_nodes[neighbors[i]].j - graph.cell_nodes[current_idx].j),2));
+            } 
+        }
+    }
+    return path;
+    
+    
+    // pasted from prev code
+    // print parents, current, costs and debug
     // initGraph(g);
     // std::vector<int> path;
     /*
@@ -101,6 +139,9 @@ std::vector<Cell> breadthFirstSearch(GridGraph &graph, const Cell &start, const 
     */
     // return path;
 }
+
+
+
 
 // *** Task: Implement this function if completing the advanced extensions *** //
 std::vector<Cell> iterativeDeepeningSearch(GridGraph &graph, const Cell &start, const Cell &goal)

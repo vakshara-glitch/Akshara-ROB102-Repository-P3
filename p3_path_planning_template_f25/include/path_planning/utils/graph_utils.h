@@ -27,7 +27,7 @@ struct CellNode
     int j;
     int parent_idx = -1;
     int dist_to_parent;
-    bool visited =false;
+    bool visited = false;
 
     // *** END STUDENT CODE *** //
 };

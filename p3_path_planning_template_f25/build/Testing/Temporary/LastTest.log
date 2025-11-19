@@ -1,10 +1,10 @@
-Start testing: Nov 12 15:49 EST
+Start testing: Nov 19 14:15 EST
 ----------------------------------------------------------
 1/6 Testing: PlanningInMichigan.AnnArborMarquette
 1/6 Test: PlanningInMichigan.AnnArborMarquette
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=PlanningInMichigan.AnnArborMarquette" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"PlanningInMichigan.AnnArborMarquette" start time: Nov 12 15:49 EST
+"PlanningInMichigan.AnnArborMarquette" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -23,7 +23,7 @@ Note: Google Test filter = PlanningInMichigan.AnnArborMarquette
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"PlanningInMichigan.AnnArborMarquette" end time: Nov 12 15:49 EST
+"PlanningInMichigan.AnnArborMarquette" end time: Nov 19 14:15 EST
 "PlanningInMichigan.AnnArborMarquette" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/6 Test: PlanningInMichigan.SaginawBentonHarbor
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=PlanningInMichigan.SaginawBentonHarbor" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"PlanningInMichigan.SaginawBentonHarbor" start time: Nov 12 15:49 EST
+"PlanningInMichigan.SaginawBentonHarbor" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -50,7 +50,7 @@ Note: Google Test filter = PlanningInMichigan.SaginawBentonHarbor
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"PlanningInMichigan.SaginawBentonHarbor" end time: Nov 12 15:49 EST
+"PlanningInMichigan.SaginawBentonHarbor" end time: Nov 19 14:15 EST
 "PlanningInMichigan.SaginawBentonHarbor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/6 Test: FindNeighbors.TestMiddle
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=FindNeighbors.TestMiddle" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"FindNeighbors.TestMiddle" start time: Nov 12 15:49 EST
+"FindNeighbors.TestMiddle" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -77,7 +77,7 @@ Note: Google Test filter = FindNeighbors.TestMiddle
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"FindNeighbors.TestMiddle" end time: Nov 12 15:49 EST
+"FindNeighbors.TestMiddle" end time: Nov 19 14:15 EST
 "FindNeighbors.TestMiddle" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/6 Test: FindNeighbors.TestCorner
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=FindNeighbors.TestCorner" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"FindNeighbors.TestCorner" start time: Nov 12 15:49 EST
+"FindNeighbors.TestCorner" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -104,7 +104,7 @@ Note: Google Test filter = FindNeighbors.TestCorner
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"FindNeighbors.TestCorner" end time: Nov 12 15:49 EST
+"FindNeighbors.TestCorner" end time: Nov 19 14:15 EST
 "FindNeighbors.TestCorner" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/6 Test: BFS.TestEmpty
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=BFS.TestEmpty" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"BFS.TestEmpty" start time: Nov 12 15:49 EST
+"BFS.TestEmpty" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -121,11 +121,28 @@ Note: Google Test filter = BFS.TestEmpty
 [----------] Global test environment set-up.
 [----------] 1 test from BFS
 [ RUN      ] BFS.TestEmpty
+
+/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/test/test_utils.h:81: Failure
+Expected equality of these values:
+  path.size()
+    Which is: 0
+  correct_path.size()
+    Which is: 6
+[  FAILED  ] BFS.TestEmpty (3 ms)
+[----------] 1 test from BFS (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BFS.TestEmpty
+
+ 1 FAILED TEST
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"BFS.TestEmpty" end time: Nov 12 15:49 EST
+"BFS.TestEmpty" end time: Nov 19 14:15 EST
 "BFS.TestEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -133,7 +150,7 @@ Test Failed.
 6/6 Test: BFS.TestCorner
 Command: "/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/test_public" "--gtest_filter=BFS.TestCorner" "--gtest_also_run_disabled_tests"
 Directory: /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build
-"BFS.TestCorner" start time: Nov 12 15:49 EST
+"BFS.TestCorner" start time: Nov 19 14:15 EST
 Output:
 ----------------------------------------------------------
 Running main() from /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-src/googletest/src/gtest_main.cc
@@ -142,12 +159,29 @@ Note: Google Test filter = BFS.TestCorner
 [----------] Global test environment set-up.
 [----------] 1 test from BFS
 [ RUN      ] BFS.TestCorner
+
+/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/test/test_utils.h:81: Failure
+Expected equality of these values:
+  path.size()
+    Which is: 0
+  correct_path.size()
+    Which is: 39
+[  FAILED  ] BFS.TestCorner (3 ms)
+[----------] 1 test from BFS (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BFS.TestCorner
+
+ 1 FAILED TEST
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"BFS.TestCorner" end time: Nov 12 15:49 EST
+"BFS.TestCorner" end time: Nov 19 14:15 EST
 "BFS.TestCorner" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 12 15:49 EST
+End testing: Nov 19 14:15 EST

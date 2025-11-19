@@ -163,8 +163,8 @@ std::vector<int> findNeighbors(int idx, const GridGraph& graph)
     Cell cell_val = idxToCell(idx, graph);
     /* bottom left neighbor */
     if (isCellInBounds(cell_val.i-1, cell_val.j-1, graph)) {
-        int nb6 = cellToIdx(cell_val.i-1, cell_val.j-1, graph);
-        neighbors.push_back(nb6);
+        int nb1 = cellToIdx(cell_val.i-1, cell_val.j-1, graph);
+        neighbors.push_back(nb1);
     }
     /* left neighbor */
     if (isCellInBounds(cell_val.i-1, cell_val.j, graph)) {
@@ -173,8 +173,8 @@ std::vector<int> findNeighbors(int idx, const GridGraph& graph)
     }
     /* top left neighbor */
     if (isCellInBounds(cell_val.i-1, cell_val.j+1, graph)) {
-        int nb8 = cellToIdx(cell_val.i-1, cell_val.j+1, graph);
-        neighbors.push_back(nb8);
+        int nb3 = cellToIdx(cell_val.i-1, cell_val.j+1, graph);
+        neighbors.push_back(nb3);
     }
     /* bottom neighbor */
     if (isCellInBounds(cell_val.i, cell_val.j-1, graph)) {
@@ -183,26 +183,26 @@ std::vector<int> findNeighbors(int idx, const GridGraph& graph)
     }
     /* top neighbor */
     if (isCellInBounds(cell_val.i, cell_val.j+1, graph)) {
-        int nb3 = cellToIdx(cell_val.i, cell_val.j+1, graph);
-        neighbors.push_back(nb3);
+        int nb5 = cellToIdx(cell_val.i, cell_val.j+1, graph);
+        neighbors.push_back(nb5);
     }
     /* bottom right neighbor */
     if (isCellInBounds(cell_val.i+1, cell_val.j-1, graph)) {
-        int nb7 = cellToIdx(cell_val.i+1, cell_val.j-1, graph);
-        neighbors.push_back(nb7);
+        int nb6 = cellToIdx(cell_val.i+1, cell_val.j-1, graph);
+        neighbors.push_back(nb6);
     }
     /* right neighbor */
     if (isCellInBounds(cell_val.i+1, cell_val.j, graph)) {
-        int nb1 = cellToIdx(cell_val.i+1, cell_val.j, graph);
-        neighbors.push_back(nb1);
+        int nb7 = cellToIdx(cell_val.i+1, cell_val.j, graph);
+        neighbors.push_back(nb7);
     }
     /* top right neighbor */
     if (isCellInBounds(cell_val.i+1, cell_val.j+1, graph)) {
-        int nb5 = cellToIdx(cell_val.i+1, cell_val.j+1, graph);
-        neighbors.push_back(nb5);
+        int nb8 = cellToIdx(cell_val.i+1, cell_val.j+1, graph);
+        neighbors.push_back(nb8);
     }
     
-    
+       return neighbors;
     
      //END STUDENT CODE
      /**
@@ -215,20 +215,10 @@ std::vector<int> findNeighbors(int idx, const GridGraph& graph)
      * HINT: The functions idxToCell(), celltoidx(), and isCellInBounds() might
      * come in handy.
      */
-     // idxToCell() // converts from an index to i, j coords
-     // isCellInBounds() // true the cell is inside of the bounds of the graph
-     //steps
-     /* 
-     1. manually do +1, -1 in the x / y directions, then +root2 in the diagonal
-     (xy?) direction
-     2. check if the neighbor is in bounds using isCellInBounds
-     3. if in bounds, celltoidx to get idx, 
-     4. gets index of each neighbor to add to vector
-
-     */
+ 
      
     
-    return neighbors;
+ 
 }   
 
 
@@ -277,15 +267,9 @@ bool checkCollision(int idx, const GridGraph& graph)
 
 int getParent(int idx, const GridGraph& graph)
 {
-     /**
-     * TODO: (P3): Return the parent of the node at idx.
-     */
-    
-    //BEGIN STUDENT CODE
-    //END STUDENT CODE
-
-    //replace this with the proper code
-    return -1;
+    int parent = graph.cell_nodes[idx].parent_idx;
+        
+    return parent;
 }
 
 
