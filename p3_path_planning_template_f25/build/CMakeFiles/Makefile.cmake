@@ -20,6 +20,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/gtest-src/googletest/cmake/gtest.pc.in"
   "_deps/gtest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/gtest-src/googletest/cmake/internal_utils.cmake"
+  "/usr/local/lib/cmake/mbot_bridge/mbot_bridgeConfig.cmake"
+  "/usr/local/lib/cmake/mbot_bridge/mbot_bridgeTargets-relwithdebinfo.cmake"
+  "/usr/local/lib/cmake/mbot_bridge/mbot_bridgeTargets.cmake"
   "/usr/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake-3.25/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c"
@@ -162,6 +165,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/plan_in_michigan.dir/DependInfo.cmake"
   "CMakeFiles/nav_cli.dir/DependInfo.cmake"
+  "CMakeFiles/robot_plan_path.dir/DependInfo.cmake"
   "CMakeFiles/test_public.dir/DependInfo.cmake"
   "_deps/gtest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"

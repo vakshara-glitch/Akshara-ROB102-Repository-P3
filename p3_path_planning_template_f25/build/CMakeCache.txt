@@ -310,7 +310,7 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Build code for the MBot.
-MBOT:BOOL=OFF
+MBOT:BOOL=ON
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/_deps/gtest-build/googlemock
@@ -366,6 +366,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
+
+//The directory containing a CMake configuration file for mbot_bridge.
+mbot_bridge_DIR:PATH=/usr/local/lib/cmake/mbot_bridge
 
 //Value Computed by CMake
 path_planning_BINARY_DIR:STATIC=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build

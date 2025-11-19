@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_temp
 # The main recursive "all" target.
 all: CMakeFiles/plan_in_michigan.dir/all
 all: CMakeFiles/nav_cli.dir/all
+all: CMakeFiles/robot_plan_path.dir/all
 all: CMakeFiles/test_public.dir/all
 all: _deps/gtest-build/all
 .PHONY : all
@@ -76,6 +77,7 @@ preinstall: _deps/gtest-build/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/plan_in_michigan.dir/clean
 clean: CMakeFiles/nav_cli.dir/clean
+clean: CMakeFiles/robot_plan_path.dir/clean
 clean: CMakeFiles/test_public.dir/clean
 clean: _deps/gtest-build/clean
 .PHONY : clean
@@ -184,6 +186,32 @@ CMakeFiles/nav_cli.dir/clean:
 .PHONY : CMakeFiles/nav_cli.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/robot_plan_path.dir
+
+# All Build rule for target.
+CMakeFiles/robot_plan_path.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_plan_path.dir/build.make CMakeFiles/robot_plan_path.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_plan_path.dir/build.make CMakeFiles/robot_plan_path.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target robot_plan_path"
+.PHONY : CMakeFiles/robot_plan_path.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/robot_plan_path.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_plan_path.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles 0
+.PHONY : CMakeFiles/robot_plan_path.dir/rule
+
+# Convenience name for target.
+robot_plan_path: CMakeFiles/robot_plan_path.dir/rule
+.PHONY : robot_plan_path
+
+# clean rule for target.
+CMakeFiles/robot_plan_path.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_plan_path.dir/build.make CMakeFiles/robot_plan_path.dir/clean
+.PHONY : CMakeFiles/robot_plan_path.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_public.dir
 
 # All Build rule for target.
@@ -191,7 +219,7 @@ CMakeFiles/test_public.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest.di
 CMakeFiles/test_public.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_public.dir/build.make CMakeFiles/test_public.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_public.dir/build.make CMakeFiles/test_public.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles --progress-num=17,18,19,20,21,22 "Built target test_public"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles --progress-num=22,23,24,25,26,27 "Built target test_public"
 .PHONY : CMakeFiles/test_public.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,8 +268,8 @@ _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-_deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/all
 _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all
+_deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"

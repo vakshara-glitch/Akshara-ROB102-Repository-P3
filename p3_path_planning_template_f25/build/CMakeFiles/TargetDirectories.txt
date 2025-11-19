@@ -1,5 +1,6 @@
 /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/plan_in_michigan.dir
 /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/nav_cli.dir
+/home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/robot_plan_path.dir
 /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/test_public.dir
 /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/test.dir
 /home/mbot/Akshara-ROB102-Repository-P3/p3_path_planning_template_f25/build/CMakeFiles/edit_cache.dir
